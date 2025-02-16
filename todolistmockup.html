@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CPT 253 ToDoList Mockup</title>
+<style>
+	#settings {
+		height: 100%; 
+		width: 150px; 
+		background-color: aqua; 
+		clear: both; 
+		grid-area: settings; 
+		justify-content: center; 
+	}
+	#settings h2 {text-align: center; 
+	}
+	#content {
+		grid-area: content; 
+		display: flex; 
+		flex-wrap: wrap; 
+		flex: auto; 	
+	}
+	header {
+		grid-area: header; 
+		background-color: pink; 
+		padding: 20px; 
+		align-content: center; 
+		text-align: center; 
+		width: auto; 
+		display: flex; 
+		flex-wrap: wrap; 
+		flex: auto;
+		padding-left: auto; 
+		padding-right: auto; 
+		justify-content: center; 
+	}
+	header button {margin-left: 50px; 
+	margin-right: 50px; 
+	}
+	#wrapper {
+		display: grid; 
+		grid-template: 
+		"settings header" 100px
+		"settings content" auto
+		/ 150px auto
+	}
+	.day { 
+		width: 300px; 
+		flex: auto;  
+		margin: 10px; 
+		background-color: lightgreen; 
+		padding: 20px; 
+		height: auto; 	
+	}
+	#new {justify-content: left; 
+	height: 120px; 
+	width: 120px; 
+	display: block; 
+	float: left;
+	clear: both; 
+	position: fixed; 
+	right: 20px; 
+	bottom: 20px; 
+	}
+	#new button {
+		height: 120px; 
+		width: 120px; 
+	}
+</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		
+		<header>
+			<button>Prev. Month</button>
+			<h1>This Month's To Do List:</h1>
+			<button>Next Month</button>
+		</header>
+		<!--This would be a good place to display the current month.-->
+		
+		<div id="settings">
+			<h2>Settings</h2>
+			<ul>
+				<li>Button 1</li>
+				<li>Button 2</li>
+				<li>Button 3</li>
+			</ul>
+		</div>
+		<!--This is where we can add settings. We could make it so this div is only visible when hovered over.-->
+		
+		
+		<div id="content">
+			<div class="day">
+				<h2>Day 1</h2>
+				<ul>
+					<li>Task 1</li>
+					<li>Task 2</li>
+					<li>Task 3</li>
+				</ul>
+			</div>
+			<!--These are each of the days where tasks can be added. The list items will need to be editable-->
+			
+		
+			<div class="day">
+				<h2>Day 2</h2>
+				<ul>
+					<li>Task 1</li>
+					<li>Task 2</li>
+					<li>Task 3</li>
+				</ul>
+			</div>
+			<div class="day">
+				<h2>Day 3</h2>
+				<ul>
+					<li>Task 1</li>
+					<li>Task 2</li>
+					<li>Task 3</li>
+				</ul>
+			</div>
+			<div class="day">
+				<h2>Day 4</h2>
+				<ul>
+					<li>Task 1</li>
+					<li>Task 2</li>
+					<li>Task 3</li>
+				</ul>
+			</div>
+			<div class="day">
+				<h2>Day 5</h2>
+				<ul>
+					<li>Task 1</li>
+					<li>Task 2</li>
+					<li>Task 3</li>
+				</ul>
+			</div>
+			<div class="day">
+				<h2>Day 6</h2>
+				<ul>
+					<li>Task 1</li>
+					<li>Task 2</li>
+					<li>Task 3</li>
+				</ul>
+			</div>
+		</div>
+		<div id="new">
+			<button>New Task</button>
+		</div>
+		<!--This is a button that allows the user to add a new task. It is always visible in the bottom right corner.-->
+		
+	</div>
+</body>
+</html>
